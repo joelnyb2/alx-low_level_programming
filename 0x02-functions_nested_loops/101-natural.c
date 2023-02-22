@@ -5,7 +5,7 @@
  * mult - Entry point
  * Return: Always 0 (Success)
  */
-int mult(void)
+int main(void)
 {
 	int value = 0;
 	int sum;

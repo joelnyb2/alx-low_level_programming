@@ -1,19 +1,17 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * mult - Entry point
- * Return: Always 0 (Success)
+ * main - entry point
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
 	int value = 0;
 	int sum;
 	int mult2;
-	int i = 0;
-	int n = 1024;
+	int i;
 
-	for (i = 1; i < n; i++)
+	for (i = 1; i < 1024; i++)
 	{
 		if (i % 5 == 0 || i % 3 == 0)
 		{
@@ -26,10 +24,9 @@ int main(void)
 		}
 		sum = mult2 + value;
 		value = sum;
-
+		mult2 = 0;
 	}
-	printf("%d", value);
-	printf("\n");
-	return (value);
+	printf("%d\n", value);
+	return (0);
 }
 

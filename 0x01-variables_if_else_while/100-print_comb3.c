@@ -14,14 +14,20 @@ int main(void)
 
 		for (k = 1; k < 10; k++)
 		{
-			putchar(i + 48);
-			putchar(k + 48);
-			if (i == 8 && k == 9)
-				break;
-			putchar(',');
+			if (i <  k)
+			{
+				putchar(i + 48);
+				putchar(k + 48);
+				if (i == 8 && k == 9)
+				{
+					putchar('\n');
+					break;
+				}
+				putchar(',');
+				putchar(' ');
+			}
 		}
 
 	}
-	putchar('\n');
 	return (0);
 }

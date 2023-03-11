@@ -10,17 +10,16 @@ void print_diagsums(int *a, int size)
 {
 	int i = 0;
 	int j = 0;
-       	
 	int diagsum = 0;
 	int oppdiagsum = 0;
 
 	while (i < size * size)
 	{
-		
+
 		if (i % (size + 1) == 0)
 		{
 			diagsum = a[i] + diagsum;
-		
+
 		}
 		i++;
 	}
@@ -31,7 +30,5 @@ void print_diagsums(int *a, int size)
 			break;
 		oppdiagsum = a[j] + oppdiagsum;
 	}
-	printf("%d, %d\n",diagsum, oppdiagsum);
-
-	
+	printf("%d, %d\n", diagsum, oppdiagsum);
 }

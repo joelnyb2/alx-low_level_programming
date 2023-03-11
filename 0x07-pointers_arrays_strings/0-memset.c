@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _memset - takes array, character and the size of the array
+ * @s: the array passed as argument
  * @b: the character place holder
  * @n: n bytes of memory pointed by the string s
  * Return: address of the array

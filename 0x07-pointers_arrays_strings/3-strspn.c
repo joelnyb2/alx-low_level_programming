@@ -7,45 +7,24 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
+	int i = 0;
+	int j;
 	int count = 0;
-	int s1 = 0;
-	int s2 = 0;
 
-	while (s[s1] != '\0')
+	while (accept[i])
 	{
-		s1++;
-	}
-	while (accept[s2] != '\0')
-	{
-		s2++;
-	}
+		j = 0;
 
-	for (i = 0; i < s2; i++)
-	{
-		for (j = 0; j < s1; j++)
+		while (s[j] != 32)
 		{
-		
 			if (accept[i] == s[j])
 			{
-				break;
-
+				count++;
 			}
-			count++;
-			if (accept[i] != s[j] && (j == s1 || i == s2))
-			{
-				return ('\0');
-			}
-			
+			j++;
 		}
-		if (accept[i] == s[j])
-			break;
-		if (accept[i] != s[j] && (j == s1 || i == s2))
-		{
-			return ('\0');
-		}	
+		i++;
 
 	}
-	return (++count);
-
+	return (count);
 }

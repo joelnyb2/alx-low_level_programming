@@ -21,17 +21,21 @@ unsigned int _strspn(char *s, char *accept)
 		s2++;
 	}
 
-	for (i = 0; i < s2 + 1; i++)
+	for (i = 0; i < s2; i++)
 	{
-		for (j = 0; j < s1 + 1; j++)
+		for (j = 0; j < s1; j++)
 		{
+			count++;
 			if (s[j] == accept[i])
 			{
-				count++;
+
+				return (count);
+
 			}
+
 		}
 	}
-	return (count);
+	return ('\0');
 
 
 

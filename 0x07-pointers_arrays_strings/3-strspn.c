@@ -25,17 +25,18 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (j = 0; j < s1; j++)
 		{
-			count++;
-			if (s[j] == accept[i])
+		
+			if (accept[i] == s[j])
 			{
-
 				break;
 
 			}
+			++count;
 		}
 		if (s[j] == accept[i])
 			break;
+
 	}
-	return (count);
+	return (count + 1);
 
 }

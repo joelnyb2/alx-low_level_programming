@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strstr - locates a substring
- * @haystack: orginal string passed as an argument
+ * haystack: orginal string passed as an argument
  * @needle: substring to be found passed as an argument
  * Return: address of the substring first occurence
  */

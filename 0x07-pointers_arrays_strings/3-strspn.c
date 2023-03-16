@@ -40,6 +40,10 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (accept[i] == s[j])
 			break;
+		if (accept[i] != s[j] && (j == s1 || i == s2))
+		{
+			return ('\0');
+		}	
 
 	}
 	return (++count);

@@ -1,30 +1,39 @@
 #include "main.h"
 /**
- * _strspn - compares and finds the number of characters in two strings
- * @s: intial character array passed as arguments
- * @accept: to be compared with array passed as argument
- * Return: Number of characters that are found
+ * _strspn - function that locates first occurence of non member
+ * @s: main string to be used
+ * @accept: source string
+ * Return: the non exisitng character location
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
-	int j;
+	int i, j;
 	int count = 0;
+	int size1 = 0;
+	int size2 = 0;
 
-	while (accept[i])
+	while (s[size1] != '\0')
 	{
-		j = 0;
-
-		while (s[j] != 32)
-		{
-			if (accept[i] == s[j])
-			{
-				count++;
-			}
-			j++;
-		}
-		i++;
-
+		size1++;
 	}
-	return (count);
+	while (accept[size2] != '\0')
+	{
+		size2++;
+	}
+
+	for (i = 0; i < size1; i++)
+	{
+		for (j = 0; j < size2; j++)
+		{
+			if (s[i] == accept[j])
+				count++;
+		}
+		if (count == 0)
+		{
+			return (i);
+		}
+		else
+			count = 0;
+	}
+	return ('\0');
 }

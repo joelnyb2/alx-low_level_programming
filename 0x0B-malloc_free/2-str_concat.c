@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	int SIZE;
 	int i;
 	char *ptr;
-	
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		*(ptr + i) = s2[i - size1];
 	}
-	
+
 
 	return (ptr);
 
